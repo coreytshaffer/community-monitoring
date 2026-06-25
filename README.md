@@ -89,3 +89,7 @@ All current station IDs and payload examples in this repo are specifically marke
 ## Suggested Next Work
 
 * Add minimal tests for validator, QA/QC, registry, and router behavior.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).

@@ -11,12 +11,14 @@
 - [ ] Confirm `accepted-internal` routing destination is **not** described as equivalent to public approval or automatic publication.
 
 ## License Decision
-A license has **not yet been chosen** for this repository. Until a `LICENSE` file is committed, default copyright is retained, meaning the repository is not officially "open source."
+The **MIT License** has been selected for this repository.
 
-Common options to consider prior to publication:
-* **MIT**: Permissive, simple, highly common for civic tech tools.
-* **Apache-2.0**: Permissive, includes an explicit patent grant clause.
-* **GPL-3.0**: Strong copyleft; requires derivative projects to also remain open source.
+**Why MIT?**
+* **Permissive and simple**: Highly common and well-understood in the civic tech and open-source community.
+* **Portfolio-friendly**: Encourages low-friction reuse, adaptation, and sharing.
+* **Appropriate for scope**: As a local staging pipeline without commercial/patented hardware control mechanisms, MIT provides the right balance of openness and attribution.
+
+*Note: If explicit patent grant language becomes a requirement for future institutional/commercial reuse, an upgrade to **Apache-2.0** could be considered. For now, MIT is sufficient.*
 
 ## Initial Release Candidate
 **Proposed Tag:** `v0.1.0-docs-and-local-trust-gates`
