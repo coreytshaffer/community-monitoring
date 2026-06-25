@@ -1,0 +1,47 @@
+[
+  {
+    "station_id": "demo-clearlake-shore-001",
+    "station_name": "Clear Lake Shore Demo Station 01",
+    "status": "demo",
+    "latitude": 39.0435,
+    "longitude": -122.8821,
+    "location_description": "Simulated station located near the north shore for testing.",
+    "waterbody": "Clear Lake",
+    "county": "Lake County",
+    "state": "CA",
+    "operator": "Community Monitoring Initiative",
+    "deployment_type": "simulated",
+    "allowed_parameters": ["dissolved_oxygen", "turbidity", "pH", "water_temperature"],
+    "notes": "Simulated metadata for platform validation."
+  },
+  {
+    "station_id": "demo-lucerne-shore-001",
+    "station_name": "Lucerne Shore Demo Station",
+    "status": "demo",
+    "latitude": 39.0883,
+    "longitude": -122.7972,
+    "location_description": "Simulated placement near Lucerne for data pipeline testing.",
+    "waterbody": "Clear Lake",
+    "county": "Lake County",
+    "state": "CA",
+    "operator": "Community Monitoring Initiative",
+    "deployment_type": "simulated",
+    "allowed_parameters": ["pH", "water_temperature"],
+    "notes": "Testing subset of parameters."
+  },
+  {
+    "station_id": "demo-upper-lake-inflow-001",
+    "station_name": "Upper Lake Inflow Demo",
+    "status": "demo",
+    "latitude": 39.1415,
+    "longitude": -122.8941,
+    "location_description": "Simulated inflow monitoring site.",
+    "waterbody": "Clear Lake",
+    "county": "Lake County",
+    "state": "CA",
+    "operator": "Community Monitoring Initiative",
+    "deployment_type": "simulated",
+    "allowed_parameters": ["turbidity", "dissolved_oxygen"],
+    "notes": "Not real field hardware."
+  }
+]

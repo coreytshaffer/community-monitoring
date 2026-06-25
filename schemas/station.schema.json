@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Station Metadata",
+  "type": "object",
+  "properties": {
+    "station_id": { "type": "string", "minLength": 1 },
+    "station_name": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["demo", "planned", "active", "inactive", "retired"]
+    },
+    "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+    "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+    "location_description": { "type": "string" },
+    "waterbody": { "type": "string" },
+    "county": { "type": "string" },
+    "state": { "type": "string" },
+    "operator": { "type": "string" },
+    "deployment_type": {
+      "type": "string",
+      "enum": ["simulated", "bench_test", "field_trial", "production"]
+    },
+    "allowed_parameters": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "notes": { "type": "string" }
+  },
+  "required": [
+    "station_id",
+    "station_name",
+    "status",
+    "latitude",
+    "longitude",
+    "location_description",
+    "waterbody",
+    "county",
+    "state",
+    "operator",
+    "deployment_type",
+    "allowed_parameters",
+    "notes"
+  ]
+}

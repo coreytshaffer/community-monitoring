@@ -52,9 +52,11 @@ Quarantined data requires manual intervention. A qualified reviewer must examine
 - Human review is a potential bottleneck if anomaly rates are high.
 - The platform does not currently support bidirectional sensor control or OTA updates.
 
-## Local Validation Gates
-The platform currently implements two distinct local validation gates:
-1. **Structural Validation (JSON Schema):** Ensures that the incoming JSON payload conforms to the strictly defined data contract (required fields, types, and allowed enumerations).
-2. **Semantic QA/QC:** Evaluates whether structurally valid observations contain environmentally plausible values (e.g., pH is between 0 and 14).
-
-**Crucially:** Passing both gates still **does not** automatically mean public publication. Human review and freshness/provenance checks are still essential before any observation reaches Clear Lake Watch.
+## Local Intake Gates
+The platform currently implements the following sequence for local intake processing:
+1. **JSON Parsing:** Validates basic payload legibility.
+2. **Structural Validation (JSON Schema):** Ensures the payload strictly matches the data contract (required fields, types, enumerations).
+3. **Semantic QA/QC:** Evaluates whether structurally valid observations represent environmentally plausible values.
+4. **Intake Routing:** Sorts payloads into logical queues (`dead-letter`, `quarantine`, `review-queue`, `accepted-internal`) based on the outcomes of the prior steps.
+5. **Station Metadata/Provenance Review:** Station metadata provides an independent provenance layer, where known stations are distinguished from rogue or unknown hardware IDs.
+6. **Human Review Before Publication:** Finally, even payloads that successfully land in `accepted-internal` must undergo human contextual review and provenance checks before they are considered suitable for public consumption on Clear Lake Watch.

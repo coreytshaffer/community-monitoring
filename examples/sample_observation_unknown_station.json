@@ -1,0 +1,16 @@
+{
+  "observation_id": "simulated-unknownstation-006",
+  "sensor_id": "temp_sensor_unknown",
+  "station_id": "fake-ghost-station-999",
+  "observed_at": "2026-06-25T08:00:00Z",
+  "received_at": "2026-06-25T08:05:00Z",
+  "parameter": "water_temperature",
+  "value": 22.5,
+  "unit": "C",
+  "latitude": 39.0435,
+  "longitude": -122.8821,
+  "source": "lorawan_gateway_main",
+  "quality_flag": "raw",
+  "review_status": "unreviewed",
+  "notes": "Structurally valid and semantically plausible observation from an unknown station ID to test provenance gaps."
+}
