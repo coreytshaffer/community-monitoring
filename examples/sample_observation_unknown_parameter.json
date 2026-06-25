@@ -1,0 +1,16 @@
+{
+  "observation_id": "simulated-unknown-005",
+  "sensor_id": "unknown_sensor_05",
+  "station_id": "lake_county_clear_lake_02",
+  "observed_at": "2026-06-25T07:40:00Z",
+  "received_at": "2026-06-25T07:45:00Z",
+  "parameter": "vibranium_level",
+  "value": 100.0,
+  "unit": "mg/L",
+  "latitude": 39.0435,
+  "longitude": -122.8821,
+  "source": "lorawan_gateway_main",
+  "quality_flag": "raw",
+  "review_status": "unreviewed",
+  "notes": "Intentionally unknown parameter for testing QA/QC REVIEW state."
+}

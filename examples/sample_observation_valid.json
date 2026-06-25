@@ -1,0 +1,16 @@
+{
+  "observation_id": "simulated-valid-001",
+  "sensor_id": "do_sensor_01",
+  "station_id": "lake_county_clear_lake_01",
+  "observed_at": "2026-06-25T07:00:00Z",
+  "received_at": "2026-06-25T07:05:00Z",
+  "parameter": "dissolved_oxygen",
+  "value": 8.2,
+  "unit": "mg/L",
+  "latitude": 39.0435,
+  "longitude": -122.8821,
+  "source": "lorawan_gateway_main",
+  "quality_flag": "valid",
+  "review_status": "auto_checked",
+  "notes": "Simulated example data for a healthy dissolved oxygen reading in Clear Lake. Not real field data."
+}

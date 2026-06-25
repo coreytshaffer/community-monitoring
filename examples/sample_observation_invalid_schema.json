@@ -1,0 +1,16 @@
+{
+  "observation_id": "simulated-invalid-003",
+  "sensor_id": "temp_sensor_03",
+  "station_id": "lake_county_clear_lake_03",
+  "observed_at": "2026-06-25T07:20:00Z",
+  "received_at": "2026-06-25T07:25:00Z",
+  "parameter": "temperature",
+  "value": "not-a-number",
+  "unit": "C",
+  "latitude": 200.0,
+  "longitude": -122.8500,
+  "source": "lorawan_gateway_main",
+  "quality_flag": "unknown_flag",
+  "review_status": "unreviewed",
+  "notes": "Intentionally malformed example: value is a string, latitude out of bounds, invalid quality_flag."
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sensor Observation",
+  "type": "object",
+  "properties": {
+    "observation_id": { "type": "string", "minLength": 1 },
+    "sensor_id": { "type": "string", "minLength": 1 },
+    "station_id": { "type": "string", "minLength": 1 },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "received_at": { "type": "string", "format": "date-time" },
+    "parameter": { "type": "string" },
+    "value": { "type": "number" },
+    "unit": { "type": "string" },
+    "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+    "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+    "source": { "type": "string" },
+    "quality_flag": {
+      "type": "string",
+      "enum": ["raw", "valid", "suspect", "invalid", "quarantined"]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["unreviewed", "auto_checked", "human_review_required", "approved_for_internal_use", "approved_for_publication", "rejected"]
+    },
+    "notes": { "type": "string" }
+  },
+  "required": [
+    "observation_id",
+    "sensor_id",
+    "station_id",
+    "observed_at",
+    "received_at",
+    "parameter",
+    "value",
+    "unit",
+    "latitude",
+    "longitude",
+    "source",
+    "quality_flag",
+    "review_status",
+    "notes"
+  ]
+}

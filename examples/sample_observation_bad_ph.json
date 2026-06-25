@@ -1,0 +1,16 @@
+{
+  "observation_id": "simulated-badph-004",
+  "sensor_id": "ph_sensor_03",
+  "station_id": "lake_county_clear_lake_01",
+  "observed_at": "2026-06-25T07:30:00Z",
+  "received_at": "2026-06-25T07:35:00Z",
+  "parameter": "pH",
+  "value": 15.5,
+  "unit": "pH",
+  "latitude": 39.0435,
+  "longitude": -122.8821,
+  "source": "lorawan_gateway_main",
+  "quality_flag": "quarantined",
+  "review_status": "human_review_required",
+  "notes": "Intentionally malformed example: pH is over 14."
+}
