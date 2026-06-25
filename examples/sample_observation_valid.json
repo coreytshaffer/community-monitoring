@@ -1,7 +1,7 @@
 {
   "observation_id": "simulated-valid-001",
   "sensor_id": "do_sensor_01",
-  "station_id": "lake_county_clear_lake_01",
+  "station_id": "demo-clearlake-shore-001",
   "observed_at": "2026-06-25T07:00:00Z",
   "received_at": "2026-06-25T07:05:00Z",
   "parameter": "dissolved_oxygen",

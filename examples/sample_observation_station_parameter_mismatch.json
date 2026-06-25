@@ -1,0 +1,16 @@
+{
+  "observation_id": "simulated-mismatch-007",
+  "sensor_id": "air_temp_sensor_01",
+  "station_id": "demo-lucerne-shore-001",
+  "observed_at": "2026-06-25T08:15:00Z",
+  "received_at": "2026-06-25T08:20:00Z",
+  "parameter": "temperature",
+  "value": 30.5,
+  "unit": "C",
+  "latitude": 39.0883,
+  "longitude": -122.7972,
+  "source": "lorawan_gateway_main",
+  "quality_flag": "raw",
+  "review_status": "unreviewed",
+  "notes": "Structurally valid observation from a known station but parameter is not in allowed_parameters."
+}

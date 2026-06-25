@@ -1,7 +1,7 @@
 {
   "observation_id": "simulated-badph-004",
   "sensor_id": "ph_sensor_03",
-  "station_id": "lake_county_clear_lake_01",
+  "station_id": "demo-clearlake-shore-001",
   "observed_at": "2026-06-25T07:30:00Z",
   "received_at": "2026-06-25T07:35:00Z",
   "parameter": "pH",

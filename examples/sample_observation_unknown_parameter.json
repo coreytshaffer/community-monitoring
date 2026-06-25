@@ -1,7 +1,7 @@
 {
   "observation_id": "simulated-unknown-005",
   "sensor_id": "unknown_sensor_05",
-  "station_id": "lake_county_clear_lake_02",
+  "station_id": "demo-clearlake-shore-001",
   "observed_at": "2026-06-25T07:40:00Z",
   "received_at": "2026-06-25T07:45:00Z",
   "parameter": "vibranium_level",

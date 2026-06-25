@@ -22,10 +22,18 @@ This document defines the semantic rules for evaluating whether a structurally v
 
 ## Additional Behaviors
 
-* **Unknown Parameters**: Any observation where the `parameter` is not explicitly defined in these rules will be flagged as `REVIEW` rather than silently accepted.
+* **Missing fields**: Handled by JSON schema validation (structural) before reaching QA/QC.
+* **Negative Values**: Most parameters cannot be negative (except temperature if in C).
+* **Unknown Parameters**: If the parameter is not listed in the rulebook, the script flags it as `REVIEW` instead of `FAIL`. This prevents valid but newly introduced sensors from being permanently quarantined while still demanding human attention.
 * **Unknown Units**: If a parameter is known but the unit does not match expectations (e.g., `pH` unit is not `pH`), it will fail semantic QA/QC.
 * **Stale Observations**: If the `observed_at` timestamp is significantly older than the `received_at` timestamp (e.g., > 24 hours lag), the record is considered stale and should be flagged for review.
 * **Invalid Coordinates**: Coordinates outside the Lake County region bounds (or standard Earth bounds [-90, 90] / [-180, 180]) will fail QA/QC if verified.
+
+## Station Provenance Rules
+
+* **Unknown Station**: If the `station_id` is missing from `registries/known_stations.json`, the observation is flagged for `REVIEW`.
+* **Parameter Mismatch**: If the parameter is not explicitly listed in the station's `allowed_parameters`, the observation is flagged for `REVIEW`.
+* **Station Status**: If the station's status is `inactive` or `retired`, the observation is flagged for `REVIEW`. Demo, planned, and active stations pass this gate for internal staging purposes.
 
 ## Why QA/QC Findings are Recommendations
 

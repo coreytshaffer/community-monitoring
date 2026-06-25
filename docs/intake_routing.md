@@ -32,4 +32,4 @@ True public trust requires cross-referencing provenance, hardware history, multi
 * **Review Loop**: Operators should regularly review the `quarantine` and `review-queue` buckets. 
   * If the sensor is miscalibrated, issue a hardware fix.
   * If a parameter is newly introduced and flagged as unknown, update the platform's known registry.
-* **Station-Aware Routing (Planned)**: While the station metadata registry exists, it is not yet strictly enforced in the router. Future updates will automatically push readings from unknown `station_id`s into the `review-queue`.
+* **Station-Aware Routing (Active)**: The router strictly enforces station metadata. Readings from unknown `station_id`s, unregistered parameters, or inactive stations are automatically pushed into the `review-queue`.

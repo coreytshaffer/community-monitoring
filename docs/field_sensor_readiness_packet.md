@@ -58,5 +58,5 @@ The platform currently implements the following sequence for local intake proces
 2. **Structural Validation (JSON Schema):** Ensures the payload strictly matches the data contract (required fields, types, enumerations).
 3. **Semantic QA/QC:** Evaluates whether structurally valid observations represent environmentally plausible values.
 4. **Intake Routing:** Sorts payloads into logical queues (`dead-letter`, `quarantine`, `review-queue`, `accepted-internal`) based on the outcomes of the prior steps.
-5. **Station Metadata/Provenance Review:** Station metadata provides an independent provenance layer, where known stations are distinguished from rogue or unknown hardware IDs.
-6. **Human Review Before Publication:** Finally, even payloads that successfully land in `accepted-internal` must undergo human contextual review and provenance checks before they are considered suitable for public consumption on Clear Lake Watch.
+5. **Station Metadata/Provenance Review:** Station metadata provides an independent provenance layer. During QA/QC, known stations are validated against their allowed parameters and operational status. Unknown or unauthorized readings are flagged for review.
+6. **Human Review Before Publication:** Finally, even payloads that successfully land in `accepted-internal` must undergo human contextual review and final provenance checks before they are considered suitable for public consumption on Clear Lake Watch.
