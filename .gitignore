@@ -1,1 +1,4 @@
 staging/
+
+__pycache__/
+*.py[cod]

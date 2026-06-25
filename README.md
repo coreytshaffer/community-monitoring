@@ -2,6 +2,16 @@
 
 This project treats field sensor readings as claims that require structure, provenance, freshness, QA/QC, routing, and human review before any public-facing use.
 
+## Portfolio Abstract
+
+This repository represents a disciplined approach to environmental data governance. For a concise summary of the project's technical highlights, resume bullets, and core philosophy, please see the **[Portfolio Abstract](docs/portfolio_abstract.md)**.
+
+## Repository Status
+
+* This repository is currently a local pipeline populated exclusively with simulated/demo testing fixtures.
+* It does not contain real physical sensor deployments or public environmental observations.
+* The repository may be published as a portfolio artifact or open-source foundation after final review. See the **[Release Checklist](docs/release_checklist.md)** before considering publication.
+
 ## Relationship to Clear Lake Watch
 
 This repository serves as a companion field data acquisition layer for **Clear Lake Watch**. While Clear Lake Watch is the public trust and dashboard layer, this platform focuses exclusively on capturing, validating, and qualifying community-submitted environmental data.
