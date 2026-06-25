@@ -8,7 +8,16 @@ This guide walks you through the local validation and routing flow of the Commun
 pip install -r requirements.txt
 ```
 
-## 2. Validate station registry
+## 2. Run Automated Test Suite (Optional)
+
+You can run the full test suite to prove the trust gates enforce their rules correctly.
+
+```powershell
+python -m unittest discover tests
+```
+*Note: The test suite intentionally processes malformed and broken examples to assert they are correctly rejected. The suite itself will pass (`OK`) if the routing behaves as expected.*
+
+## 3. Validate station registry
 
 Ensure the station registry meets the required metadata schema and contains no duplicate IDs.
 

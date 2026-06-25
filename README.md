@@ -37,6 +37,16 @@ The platform establishes a disciplined local-first trust pipeline. It performs t
    pip install -r requirements.txt
    ```
 
+## Testing the Pipeline
+
+A minimal automated test suite is included to prove the scripts behave as documented without needing manual invocation.
+
+```powershell
+python -m unittest discover tests
+```
+
+*Note: It is normal and expected that tests assert on validation failures (e.g., negative pH, unknown stations, invalid JSON). The test suite passes when the pipelines correctly trap these errors.*
+
 ## Example Routing Results & Validation
 
 For a comprehensive command-driven walkthrough of the pipeline and how it handles pass, fail, unknown stations, and parameter mismatches, see the **[Reviewer Quickstart](docs/reviewer_quickstart.md)**.
