@@ -16,6 +16,13 @@ This repository represents a disciplined approach to environmental data governan
 
 This repository serves as a companion field data acquisition layer for **Clear Lake Watch**. While Clear Lake Watch is the public trust and dashboard layer, this platform focuses exclusively on capturing, validating, and qualifying community-submitted environmental data.
 
+## Verifiable Citizen Science Direction
+
+This repository is the natural home for a **Proof-of-Observation** pipeline — an extension of the existing trust-gate architecture to citizen-submitted environmental observations. The pipeline will evaluate whether a citizen-submitted observation is sufficiently structured, provenance-aware, and privacy-bounded for human review. It will not determine environmental truth, issue public advisories, or bypass expert judgment.
+
+* [Verifiable Citizen Science Roadmap](docs/verifiable_citizen_science_roadmap.md) — phased plan for extending the platform.
+* [Proof-of-Observation v0.1](docs/proof_of_observation_v0_1.md) — chain-of-custody and review-readiness concept.
+
 ## What This Project Does
 
 The platform establishes a disciplined local-first trust pipeline. It performs the following checks:
