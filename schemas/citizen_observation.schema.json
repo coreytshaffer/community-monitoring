@@ -1,0 +1,152 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Verifiable Citizen Science - Observation Schema",
+    "description": "Evaluates whether a citizen-submitted observation is structurally complete enough to enter review. This does NOT imply environmental truth.",
+    "type": "object",
+    "properties": {
+        "observation_id": {
+            "type": "string",
+            "description": "Unique identifier for the observation."
+        },
+        "submitted_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of submission to the pipeline."
+        },
+        "observed_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of when the observation occurred."
+        },
+        "observation_type": {
+            "type": "string",
+            "enum": [
+                "algae_bloom_report",
+                "odor_report",
+                "discoloration_report",
+                "wildlife_observation",
+                "trash_or_dumping_report",
+                "other"
+            ]
+        },
+        "waterbody": {
+            "type": "string",
+            "description": "Name of the associated waterbody, if known."
+        },
+        "site_name": {
+            "type": "string",
+            "description": "Local name for the site, if known."
+        },
+        "latitude": {
+            "type": ["number", "null"],
+            "description": "WGS84 latitude. Can be omitted or null if location is withheld."
+        },
+        "longitude": {
+            "type": ["number", "null"],
+            "description": "WGS84 longitude. Can be omitted or null if location is withheld."
+        },
+        "location_precision": {
+            "type": "string",
+            "enum": [
+                "exact",
+                "approximate",
+                "withheld",
+                "unknown"
+            ]
+        },
+        "location_privacy": {
+            "type": "string",
+            "enum": [
+                "public_site",
+                "private_property",
+                "sensitive_habitat",
+                "withheld",
+                "unknown"
+            ]
+        },
+        "observer_type": {
+            "type": "string",
+            "enum": [
+                "community_member",
+                "trained_volunteer",
+                "staff",
+                "partner_org",
+                "simulated"
+            ]
+        },
+        "evidence_type": {
+            "type": "string",
+            "enum": [
+                "photo",
+                "field_note",
+                "sensor_reading",
+                "sample_reference",
+                "none",
+                "other"
+            ]
+        },
+        "evidence_uri": {
+            "type": "string",
+            "description": "URI to the attached evidence payload, if applicable."
+        },
+        "evidence_hash": {
+            "type": "string",
+            "description": "Cryptographic hash of the evidence payload for chain of custody."
+        },
+        "description": {
+            "type": "string",
+            "description": "Observer's textual description of what was seen."
+        },
+        "source": {
+            "type": "string",
+            "description": "System or app that submitted the observation."
+        },
+        "quality_flag": {
+            "type": "string",
+            "enum": [
+                "raw",
+                "structurally_valid",
+                "incomplete",
+                "privacy_review_required",
+                "ambiguous",
+                "invalid"
+            ]
+        },
+        "review_status": {
+            "type": "string",
+            "enum": [
+                "unreviewed",
+                "auto_checked",
+                "human_review_required",
+                "approved_for_internal_use",
+                "approved_for_publication",
+                "rejected"
+            ]
+        },
+        "provenance_status": {
+            "type": "string",
+            "enum": [
+                "complete_metadata",
+                "incomplete_metadata",
+                "private_location_review",
+                "ambiguous_evidence_review",
+                "invalid_structure"
+            ]
+        },
+        "notes": {
+            "type": "string",
+            "description": "Reviewer or system notes regarding routing and status."
+        },
+        "simulated": {
+            "type": "boolean",
+            "const": true,
+            "description": "Safety invariant. All observations must be marked as simulated in v0.1."
+        }
+    },
+    "required": [
+        "observation_id",
+        "observation_type",
+        "simulated"
+    ],
+    "additionalProperties": false
+}

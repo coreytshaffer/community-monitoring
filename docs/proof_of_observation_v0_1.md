@@ -59,3 +59,13 @@ Additional limitations:
 * The privacy gate in v0.1 is a conceptual placeholder. Production privacy screening would require geospatial boundary checks, PII detection, and legal review.
 * `accepted-internal` is an internal routing status, not a public endorsement or approval.
 * No automated downstream actions (alerts, publications, agency notifications) are triggered by any status.
+
+## VCS-002 Schema Contract
+
+The initial structural contract and simulated fixtures for citizen observations can be found here:
+
+* [citizen_observation.schema.json](../schemas/citizen_observation.schema.json)
+* [citizen_observation_valid_algae_report.json](../examples/citizen_observation_valid_algae_report.json)
+* [citizen_observation_missing_location.json](../examples/citizen_observation_missing_location.json)
+* [citizen_observation_sensitive_location.json](../examples/citizen_observation_sensitive_location.json)
+* [citizen_observation_ambiguous_evidence.json](../examples/citizen_observation_ambiguous_evidence.json)
