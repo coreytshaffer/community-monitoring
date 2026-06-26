@@ -87,3 +87,12 @@ A deterministic review packet is exported for observations entering the review q
 * It summarizes metadata, evidence, privacy concerns, provenance status, and limitations.
 * It does not approve publication or verify the observation.
 * For full formatting details and examples, see the [Review Packet Format](review_packet_format.md).
+
+## VCS-005 Local Trust Ledger Stub
+
+A local trust ledger records deterministic review-readiness outcomes for simulated citizen observations.
+
+* The ledger records local evaluation outcomes.
+* It supports auditability and future reviewer traceability.
+* It does not publish, verify, or certify observations.
+* For format and limitations, see the [Trust Ledger](trust_ledger.md).
