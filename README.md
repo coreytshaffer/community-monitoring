@@ -80,6 +80,7 @@ Explore the core documentation files defining this architecture:
 * [MQTT Topic Conventions](docs/mqtt_topic_conventions.md)
 * [Review Packet Format](docs/review_packet_format.md)
 * [Trust Ledger](docs/trust_ledger.md)
+* [Verifiable Citizen Science v0.1 Checkpoint](docs/vcs_v0_1_checkpoint.md)
 
 ## Safety & Publication Doctrine
 
