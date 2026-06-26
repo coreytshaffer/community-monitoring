@@ -2,3 +2,8 @@ staging/
 
 __pycache__/
 *.py[cod]
+
+# Google Drive placeholders
+*.gdoc
+*.gsheet
+*.gslides
