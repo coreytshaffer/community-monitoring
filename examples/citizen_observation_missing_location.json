@@ -1,0 +1,19 @@
+{
+  "observation_id": "vcs-obs-002",
+  "submitted_at": "2026-06-26T01:00:00Z",
+  "observed_at": "2026-06-25T15:00:00Z",
+  "observation_type": "odor_report",
+  "waterbody": "Clear Lake",
+  "latitude": null,
+  "longitude": null,
+  "location_precision": "withheld",
+  "location_privacy": "withheld",
+  "observer_type": "community_member",
+  "evidence_type": "none",
+  "description": "Strong sulfur smell but I don't want to share my location.",
+  "source": "vcs_mobile_app",
+  "quality_flag": "incomplete",
+  "review_status": "human_review_required",
+  "provenance_status": "incomplete_metadata",
+  "simulated": true
+}

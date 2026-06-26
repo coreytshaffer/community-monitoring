@@ -1,0 +1,22 @@
+{
+  "observation_id": "vcs-obs-001",
+  "submitted_at": "2026-06-26T00:00:00Z",
+  "observed_at": "2026-06-25T14:30:00Z",
+  "observation_type": "algae_bloom_report",
+  "waterbody": "Clear Lake",
+  "site_name": "Redbud Park Boat Ramp",
+  "latitude": 38.948,
+  "longitude": -122.651,
+  "location_precision": "exact",
+  "location_privacy": "public_site",
+  "observer_type": "community_member",
+  "evidence_type": "photo",
+  "evidence_uri": "s3://example-bucket/photos/vcs-obs-001.jpg",
+  "evidence_hash": "a1b2c3d4e5f6...",
+  "description": "Green algae on the surface near the boat launch.",
+  "source": "vcs_web_form",
+  "quality_flag": "structurally_valid",
+  "review_status": "human_review_required",
+  "provenance_status": "complete_metadata",
+  "simulated": true
+}
