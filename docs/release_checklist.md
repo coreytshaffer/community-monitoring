@@ -42,3 +42,11 @@ The **MIT License** has been selected for this repository.
 * Automatic public publication workflows
 * Official agency water-quality data
 * Real Clear Lake field measurements
+
+## Verifiable Citizen Science / Proof-of-Observation Checks
+
+- [ ] Confirm citizen-observation examples are simulated.
+- [ ] Confirm no real submitter names, household details, private locations, faces, license plates, or sensitive site coordinates are included.
+- [ ] Confirm provenance status is not described as truth status.
+- [ ] Confirm `accepted-internal` routing is not described as public approval.
+- [ ] Confirm no automated public-health, regulatory, or agency-notification claims are made.
