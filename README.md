@@ -78,6 +78,7 @@ Explore the core documentation files defining this architecture:
 * [Semantic QA/QC Rules](docs/semantic_qaqc_rules.md)
 * [Intake Routing](docs/intake_routing.md)
 * [MQTT Topic Conventions](docs/mqtt_topic_conventions.md)
+* [Review Packet Format](docs/review_packet_format.md)
 
 ## Safety & Publication Doctrine
 
