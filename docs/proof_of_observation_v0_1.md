@@ -69,3 +69,12 @@ The initial structural contract and simulated fixtures for citizen observations 
 * [citizen_observation_missing_location.json](../examples/citizen_observation_missing_location.json)
 * [citizen_observation_sensitive_location.json](../examples/citizen_observation_sensitive_location.json)
 * [citizen_observation_ambiguous_evidence.json](../examples/citizen_observation_ambiguous_evidence.json)
+
+## VCS-003 Provenance Status Evaluator
+
+The deterministic provenance status evaluator for citizen observations can be found in `scripts/evaluate_citizen_provenance.py`.
+
+* This evaluator assigns review-readiness/provenance status.
+* It does not verify environmental truth.
+* It uses deterministic local rules based on metadata completeness, location privacy, and evidence clarity.
+* It is intended to support later routing and human-review packet generation.
