@@ -78,3 +78,12 @@ The deterministic provenance status evaluator for citizen observations can be fo
 * It does not verify environmental truth.
 * It uses deterministic local rules based on metadata completeness, location privacy, and evidence clarity.
 * It is intended to support later routing and human-review packet generation.
+
+## VCS-004 Human Review Packet Export
+
+A deterministic review packet is exported for observations entering the review queue.
+
+* The packet is a human-review aid.
+* It summarizes metadata, evidence, privacy concerns, provenance status, and limitations.
+* It does not approve publication or verify the observation.
+* For full formatting details and examples, see the [Review Packet Format](review_packet_format.md).
