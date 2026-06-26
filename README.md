@@ -79,6 +79,7 @@ Explore the core documentation files defining this architecture:
 * [Intake Routing](docs/intake_routing.md)
 * [MQTT Topic Conventions](docs/mqtt_topic_conventions.md)
 * [Review Packet Format](docs/review_packet_format.md)
+* [Trust Ledger](docs/trust_ledger.md)
 
 ## Safety & Publication Doctrine
 
