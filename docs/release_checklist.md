@@ -30,6 +30,9 @@ The **MIT License** has been selected for this repository.
 * Structural validation scripts
 * Semantic QA/QC boundary enforcement scripts
 * Intake routing scripts
+* Citizen provenance evaluator script
+* Citizen human review packet renderer
+* Citizen local trust ledger stub
 * Minimal `unittest` validation suite
 * Documentation (Readiness Packet, Contract, QA/QC Rules, Routing, Quickstart, Metadata, Portfolio Abstract)
 
