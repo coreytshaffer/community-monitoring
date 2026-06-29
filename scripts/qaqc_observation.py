@@ -1,7 +1,7 @@
 import sys
 import json
 import os
-from datetime import datetime, timezone
+from datetime import datetime
 
 # Define parameter bounds
 PARAMETER_RULES = {
@@ -13,10 +13,33 @@ PARAMETER_RULES = {
     "air_temperature": {"unit": "C", "min": -40.0, "max": 60.0},
 }
 
+
 def parse_iso(ts):
-    if ts.endswith('Z'):
-        return datetime.fromisoformat(ts[:-1] + '+00:00')
+    if not isinstance(ts, str) or not ts:
+        raise ValueError("timestamp must be a non-empty ISO 8601 string")
+    if ts.endswith("Z"):
+        return datetime.fromisoformat(ts[:-1] + "+00:00")
     return datetime.fromisoformat(ts)
+
+
+def validate_coordinates(observation):
+    latitude = observation.get("latitude")
+    longitude = observation.get("longitude")
+
+    if latitude is None or longitude is None:
+        return None
+
+    if not isinstance(latitude, (int, float)) or not isinstance(longitude, (int, float)):
+        return "FAIL", "latitude and longitude must be numeric when present"
+
+    if not -90.0 <= latitude <= 90.0:
+        return "FAIL", f"latitude must be within Earth bounds [-90, 90] (got {latitude})"
+
+    if not -180.0 <= longitude <= 180.0:
+        return "FAIL", f"longitude must be within Earth bounds [-180, 180] (got {longitude})"
+
+    return None
+
 
 def load_station_registry(registry_path="registries/known_stations.json"):
     if not os.path.exists(registry_path):
@@ -25,6 +48,7 @@ def load_station_registry(registry_path="registries/known_stations.json"):
     with open(registry_path, "r") as f:
         registry = json.load(f)
     return {s["station_id"]: s for s in registry}
+
 
 def qaqc_check(observation, stations_registry=None):
     if stations_registry is None:
@@ -63,16 +87,27 @@ def qaqc_check(observation, stations_registry=None):
     if rules["max"] is not None and value > rules["max"]:
         return "FAIL", f"{param} cannot be greater than {rules['max']} (got {value})"
 
-    # Simple freshness check: received vs observed
+    if param == "dissolved_oxygen" and value > 20.0:
+        return "REVIEW", f"{param} above 20.0 mg/L is physically rare and requires review (got {value})"
+
+    coordinate_result = validate_coordinates(observation)
+    if coordinate_result is not None:
+        return coordinate_result
+
     try:
         observed_at = parse_iso(observation.get("observed_at"))
         received_at = parse_iso(observation.get("received_at"))
-        if (received_at - observed_at).total_seconds() > 86400:
-            return "REVIEW", "Observation is stale (> 24 hours between observation and receipt)"
-    except Exception:
-        pass
+    except ValueError as exc:
+        return "REVIEW", f"Timestamp review required: {exc}"
+
+    if received_at < observed_at:
+        return "FAIL", "received_at cannot be earlier than observed_at"
+
+    if (received_at - observed_at).total_seconds() > 86400:
+        return "REVIEW", "Observation is stale (> 24 hours between observation and receipt)"
 
     return "PASS", "Semantic QA/QC checks passed"
+
 
 def main():
     import argparse
@@ -106,6 +141,7 @@ def main():
     if not all_passed:
         sys.exit(1)
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
